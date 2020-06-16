@@ -18,9 +18,9 @@ public class TestController {
 //        model.addAttribute("name", name);
 //        return "hello";
 //    }
-    @GetMapping({"/"})
-    public String home(Model model) {
-        return "home";
-    }
+//    @GetMapping({"/"})
+//    public String home(Model model) {
+//        return "home";
+//    }
 
 }
