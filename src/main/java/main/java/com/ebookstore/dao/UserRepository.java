@@ -1,8 +1,8 @@
-package main.java.com.ebookstore;
+package main.java.com.ebookstore.dao;
 
 import org.springframework.data.repository.CrudRepository;
 
-import main.java.com.ebookstore.User;
+import main.java.com.ebookstore.model.User;
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
 // CRUD refers Create, Read, Update, Delete
