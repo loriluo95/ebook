@@ -13,10 +13,14 @@ public class TestController {
 //        model.addAttribute("name", name);
 //        return "greeting";
 //    }
+//    @GetMapping({"/"})
+//    public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
+//        model.addAttribute("name", name);
+//        return "hello";
+//    }
     @GetMapping({"/"})
-    public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
-        model.addAttribute("name", name);
-        return "hello";
+    public String home(Model model) {
+        return "home";
     }
 
 }
