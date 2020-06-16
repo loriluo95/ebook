@@ -1,43 +1,40 @@
-<!DOCTYPE html>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<html lang="en">
+<%@ page contentType="text/html;charset=windows-1252"%>
+<html>
 <head>
-
-<link rel="stylesheet" type="text/css"
- href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
-<c:url value="/css/main.css" var="jstlCss" />
-<link href="${jstlCss}" rel="stylesheet" />
-
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>EBook</title>
+<style>
+body {
+    background-image: url("img/index.jpg");
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.button {
+    background-color: #555555;
+    color: white;
+    border-radius: 8px;
+    height: 35px;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    position:absolute;
+    top: 47%;
+    left: 15%;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+} /* Blue */
+</style>
 </head>
 <body>
- <div class="container">
-  <header>
-   <h1>Hello, EBook!</h1>
-  </header>
-  <div class="starter-template">
-   <h1>Users List</h1>
-   <table
-    class="table table-striped table-hover table-condensed table-bordered">
-    <tr>
-     <th>userId</th>
-     <th>Name</th>
-     <th>Password</th>
-    </tr>
-    <c:forEach var="user" items="${users}">
-     <tr>
-      <td>${user.userId}</td>
-      <td>${user.username}</td>
-      <td>${user.password}</td>
-     </tr>
-    </c:forEach>
-   </table>
-  </div>
-
- </div>
-
- <script type="text/javascript"
-  src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div class="content">
+       <a href="users" class="button">Show Users</a>
+    </div>
 </body>
-
 </html>
