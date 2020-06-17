@@ -3,6 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>EBook</title>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width"/>
+<base href="/"/>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <style>
 body {
     background-image: url("img/index.jpg");
@@ -34,7 +42,8 @@ body {
 </head>
 <body>
     <div class="content">
-       <a href="users" class="button">Show Users</a>
+       <a href="all" class="button">Show Users</a>
     </div>
+    <div class="container"></div>
 </body>
 </html>
