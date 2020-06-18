@@ -2,17 +2,17 @@ package main.java.com.ebookstore.model;
 
 import javax.persistence.*;
 
-@Entity // This tells Hibernate to make a table out of this class
-public class Users {
+@Entity
+@Table(name = "users")
+public class User {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.TABLE)
+	@Column(name="userId")
 	private int userId;
+	@Column(name="username")
 	private String username;
+	@Column(name="password")
 	private String password;
-	private boolean enabled;
-
-	@JoinColumn(name="customerId")
-	private int customerId;
 
 	public int getUserId() {
 		return userId;
@@ -36,21 +36,5 @@ public class Users {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public boolean isEnabled() {
-		return enabled;
-	}
-
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
-	}
-
-	public int getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
 	}
 }

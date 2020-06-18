@@ -1,31 +1,24 @@
 package main.java.com.ebookstore.controller;
 
-import main.java.com.ebookstore.model.Users;
-import main.java.com.ebookstore.dao.UserRepository;
+import main.java.com.ebookstore.model.User;
+import main.java.com.ebookstore.dao.UserDao;
+import main.java.com.ebookstore.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 @Controller
-//@RequestMapping(path="/api")
+@RequestMapping(path="/user")
 public class UserController {
 	@Autowired
-	private UserRepository userRepository;
-
-	@PostMapping(path="/users/add")
-	public @ResponseBody String addNewUser (@RequestParam String username
-			, @RequestParam String password) {
-		Users n = new Users();
-		n.setUsername(username);
-		n.setPassword(password);
-		userRepository.save(n);
-		return "Saved";
-	}
-
-	@GetMapping(path="/users")
-	public String getAllUsers(Model model) {
-		model.addAttribute("users", userRepository.findAll());
-		return "users";
+	private UserService userService;
+	@RequestMapping(value = "/all", method = RequestMethod.GET)
+	public ResponseEntity<byte[]> getAllUsers() throws IOException {
+		ResponseEntity<byte[]> responseEntity = userService.getUsername();
+		return responseEntity;
 	}
 }

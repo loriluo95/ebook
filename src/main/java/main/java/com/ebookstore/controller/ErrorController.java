@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ErrorController {
-
     @RequestMapping(value = "/**/{path:[^\\\\.]*}")
     public String redirect() {
         return "index";
