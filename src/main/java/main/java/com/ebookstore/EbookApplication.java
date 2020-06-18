@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //    }
 //}
 @SpringBootApplication
-@RequestMapping(path="/api")
 public class EbookApplication {
     public static void main(String[] args) {
         SpringApplication.run(EbookApplication.class, args);
