@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.*;
 public class MainController {
     @RequestMapping(path="/")
     public String homePage () {
-        return "index";
+        return "users";
     }
 }
