@@ -6,5 +6,5 @@ spring:
           github:
             clientId: 546a761990d27c3a0822
             clientSecret: 97456a0bb39149cc42b9c4ada828cb8423ab37e3
-server:
-  port: $PORT
+#server:
+#  port: $PORT

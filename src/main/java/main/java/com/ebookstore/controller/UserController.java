@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
@@ -33,13 +34,17 @@ public class UserController {
 	}
 
 	@GetMapping("/users")
-	public CollectionModel<EntityModel<User>> all() {
-//		return userService.listAll();
-		List<EntityModel<User>> employees = userService.listAll().stream() //
-				.map(assembler::toModel) //
-				.collect(Collectors.toList());
+//	public CollectionModel<EntityModel<User>> all() {
+////		return userService.listAll();
+//		List<EntityModel<User>> employees = userService.listAll().stream() //
+//				.map(assembler::toModel) //
+//				.collect(Collectors.toList());
+//
+//		return new CollectionModel(employees, linkTo(methodOn(UserController.class).all()).withSelfRel());
+//	}
 
-		return new CollectionModel(employees, linkTo(methodOn(UserController.class).all()).withSelfRel());
+	public Collection<User> all() {
+		return userService.listAll();
 	}
 
 	@GetMapping("/users/{userId}")
